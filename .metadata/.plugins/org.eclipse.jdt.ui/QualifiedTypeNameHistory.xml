@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="support.WeatherAPI"/>
+    <fullyQualifiedTypeName name="org.activiti.engine.delegate.DelegateExecution"/>
+    <fullyQualifiedTypeName name="org.activiti.engine.delegate.JavaDelegate"/>
+    <fullyQualifiedTypeName name="support.AccuWeatherAPI"/>
+</qualifiedTypeNameHistroy>

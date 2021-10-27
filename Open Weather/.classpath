@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_301">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/json-simple-1.1.1.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/lemon_ball/Desktop/AIS/library/activiti-bpmn-converter-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lemon_ball/Desktop/AIS/library/activiti-bpmn-model-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lemon_ball/Desktop/AIS/library/activiti-engine-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lemon_ball/Desktop/AIS/library/activiti-image-generator-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lemon_ball/Desktop/AIS/library/activiti-process-validation-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lemon_ball/Desktop/AIS/library/activiti-spring-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lemon_ball/Desktop/Ficheiros Aula 2-20211011/weatherAPI.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
