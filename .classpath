@@ -6,11 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/Pedro Capelo/Desktop/5ºano/1ºsemestre/AIS/Pratica/Open Weather/lib/json-simple-1.1.1.jar">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="lib/activiti-bpmn-converter-6.0.0.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
