@@ -1,0 +1,14 @@
+{
+	"APIkey":"BBFF-484f4a7c8258b9e1979edee2abfb0ff9db8",
+	"_comment":"R for raspberry| A for arduino",
+	"A_TempIntID":"61b3aea848879b347ecc9bc4",
+	"R_TempIntID":"61bce820b9be60000ab3b37e",
+	"TempExID":"61bce86a5e0e110250477af9",
+	"R_MotorID":"61b7158ca96e64b125e8a358",
+	"A_MotorID":"61b313f4a7f5cf24f3781094",
+	"FireID":"61bd17cf4e534c225ae8a281",
+	"R_LedID":"61a9d32192091e000cbb66e0",
+	"A_LedID":"61a9d40d92091e000ee19019",
+	"TempConfortoID":"61a9da2fe0d144000b945e62",
+	"AlarmeID":"61b3ae54a4d9724562312982"
+}

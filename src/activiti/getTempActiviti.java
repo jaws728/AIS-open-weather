@@ -4,35 +4,40 @@ import org.activiti.engine.delegate.DelegateExecution;
 import org.activiti.engine.delegate.JavaDelegate;
 import java.io.IOException;
 
+import support.PathFile;
 import support.WeatherAPI;
+import ubidotsCode.Ubidots;
 
-public class getTempActiviti implements JavaDelegate 
+public class GetTempActiviti implements JavaDelegate 
 {
 	public void execute(DelegateExecution execution) 
 	{
-		//
 		//<variável para receber o valor> = execution.getVariable("<Nome da variável usada no Activiti>");
-		// TODO Auto-generated method stub
-				WeatherAPI wAPI = new WeatherAPI();
-				String key =  "0c72e0670fb7e6bf0d188a765e70ea44";
-				String city = "Almada,pt";
-				String unit = "metric";
-				String language = "pt";
-				
-				
-				try 
-				{
-					long humidity;
-					double temp;
-					humidity = wAPI.getHumidity(key,city,unit,language);
-					temp = wAPI.getTemp(key,city,unit,language);
-					execution.setVariable("temperaturaexterior", temp);
-					//System.out.print(temp);
-				}
-				catch (IOException e) 
-				{
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}								
+		//Obter temp a partir de api open weather
+		WeatherAPI wAPI = new WeatherAPI();
+		
+		PathFile fp = new PathFile();
+		String file=fp.FilePath();
+		String key=Ubidots.returnJSONvalue("WeatherAPIkey",file);
+		String apiKeyUbidots=Ubidots.returnJSONvalue("API key",file);
+		String tempID=Ubidots.returnJSONvalue("TempExID",file);
+		
+		String city = "Almada,pt";
+		String unit = "metric";
+		String language = "pt";
+		
+		try 
+		{
+			//Get from open weather api
+			float temp = (float)wAPI.getTemp(key,city,unit,language);
+			//Send to smart mirror
+			Ubidots.setValuefromUbidots(apiKeyUbidots, tempID, temp);
+			
+			//execution.setVariable("temperaturaexterior", temp);
+		}
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}								
 	}
 }

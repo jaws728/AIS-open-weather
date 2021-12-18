@@ -6,14 +6,17 @@ import org.activiti.engine.delegate.JavaDelegate;
 import support.PathFile;
 import ubidotsCode.Ubidots;
 
-public class TurnOffFireAlert implements JavaDelegate {
+public class LedOff  implements JavaDelegate{
 	public void execute(DelegateExecution execution) 
 	{
+		///Assume-se que o activiti verificou o caminho para tras
+		///Basta enviar o sinal desligar para arduino
 		PathFile fp = new PathFile();
 		String file=fp.FilePath();
 		String apiKeyUbidots=Ubidots.returnJSONvalue("APIkey",file);
-		String alertID=Ubidots.returnJSONvalue("AlarmeID",file);
-		int turnOffFire=0;
-		Ubidots.setValuefromUbidots(apiKeyUbidots, alertID, turnOffFire);
+		String A_ID=Ubidots.returnJSONvalue("A_LedID",file); //receive command
+		
+		//Send command to arduino
+		Ubidots.setValuefromUbidots(apiKeyUbidots, A_ID, 0);
 	}
 }

@@ -6,14 +6,19 @@ import org.activiti.engine.delegate.JavaDelegate;
 import support.PathFile;
 import ubidotsCode.Ubidots;
 
-public class TurnOffFireAlert implements JavaDelegate {
+public class ExportData implements JavaDelegate {
 	public void execute(DelegateExecution execution) 
 	{
+		//Assumindo que os valores foram feitos guardados no ubidots
+		//Envia um sinal para exportar data
+		
 		PathFile fp = new PathFile();
 		String file=fp.FilePath();
+		
 		String apiKeyUbidots=Ubidots.returnJSONvalue("APIkey",file);
-		String alertID=Ubidots.returnJSONvalue("AlarmeID",file);
-		int turnOffFire=0;
-		Ubidots.setValuefromUbidots(apiKeyUbidots, alertID, turnOffFire);
+		String ExpID=Ubidots.returnJSONvalue("ExportID",file);
+		
+		//Send command to smart mirror
+		Ubidots.setValuefromUbidots(apiKeyUbidots, ExpID, 1);
 	}
 }
