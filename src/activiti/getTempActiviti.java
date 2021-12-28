@@ -30,6 +30,7 @@ public class GetTempActiviti implements JavaDelegate
 		{
 			//Get from open weather api
 			float temp = (float)wAPI.getTemp(key,city,unit,language);
+			//System.out.println(temp);
 			//Send to smart mirror
 			Ubidots.setValuefromUbidots(apiKeyUbidots, tempID, temp);
 			

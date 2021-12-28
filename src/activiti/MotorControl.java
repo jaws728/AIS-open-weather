@@ -19,10 +19,10 @@ public class MotorControl implements JavaDelegate {
         LocalTime currentTime = LocalTime.now();
         int motorOn = -1;
 
-        if (currentTime.getHour() > 8) {
+        if (currentTime.getHour() >= 8  & currentTime.getHour() < 18) {
             motorOn = 1;
         }
-        if (currentTime.getHour() < 18) {
+        if (currentTime.getHour() >= 18 & currentTime.getHour() < 8) {
             motorOn = 0;
         }
         

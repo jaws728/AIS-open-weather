@@ -13,9 +13,11 @@ public class Ubidots {
 	      
 	}
 	 public static Double getValuefromUbidots(String APIKey, String valueID) {
-	        ApiClient api = new ApiClient(APIKey);
+	        //System.out.println(APIKey);
+		 	ApiClient api = new ApiClient(APIKey);
 	        
 	        Variable variable = api.getVariable(valueID);
+	        //System.out.println(APIKey);
 	        return variable.getValues()[0].getValue();
 	 }
 	 public static void setValuefromUbidots(String APIKey, String valueID, float value) {

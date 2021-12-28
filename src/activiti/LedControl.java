@@ -25,11 +25,14 @@ public class LedControl implements JavaDelegate {
 		double ledState = Ubidots.getValuefromUbidots(apiKeyUbidots, A_ID); //0 or 1
 		double ledCommand = Ubidots.getValuefromUbidots(apiKeyUbidots, R_ID); //0 or 1
 		
-		int led = -1;
+		int led = (int)ledState;
 		
 		//state!=command then change state
-        if (ledCommand != ledState) {
-            led = (int)ledCommand;
+        if (ledCommand == 0 & ledState == 1) {
+            led = 0;
+        }
+        if (ledCommand == 1 & ledState == 0) {
+            led = 1;
         }
 
         //Send result to activiti

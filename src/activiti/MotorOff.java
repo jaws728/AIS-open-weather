@@ -14,11 +14,11 @@ public class MotorOff  implements JavaDelegate{
 		String file=fp.FilePath();
 		String apiKeyUbidots=Ubidots.returnJSONvalue("APIkey",file);
 		String A_ID=Ubidots.returnJSONvalue("A_MotorID",file);
-		String R_ID=Ubidots.returnJSONvalue("R_MotorID",file);
+		//String R_ID=Ubidots.returnJSONvalue("R_MotorID",file);
 		
 		//Update ubidots
         Ubidots.setValuefromUbidots(apiKeyUbidots, A_ID, 0);
-        Ubidots.setValuefromUbidots(apiKeyUbidots, R_ID, 0);
+        //Ubidots.setValuefromUbidots(apiKeyUbidots, R_ID, 0);
         
 	}
 }

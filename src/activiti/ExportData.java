@@ -16,6 +16,7 @@ public class ExportData implements JavaDelegate {
 		String file=fp.FilePath();
 		
 		String apiKeyUbidots=Ubidots.returnJSONvalue("APIkey",file);
+		
 		String ExpID=Ubidots.returnJSONvalue("ExportID",file);
 		
 		//Send command to smart mirror

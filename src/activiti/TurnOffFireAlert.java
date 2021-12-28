@@ -13,7 +13,7 @@ public class TurnOffFireAlert implements JavaDelegate {
 		String file=fp.FilePath();
 		String apiKeyUbidots=Ubidots.returnJSONvalue("APIkey",file);
 		String alertID=Ubidots.returnJSONvalue("AlarmeID",file);
-		int turnOffFire=0;
-		Ubidots.setValuefromUbidots(apiKeyUbidots, alertID, turnOffFire);
+		//int turnOffFire=0;
+		Ubidots.setValuefromUbidots(apiKeyUbidots, alertID, 0);
 	}
 }
