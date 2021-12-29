@@ -5,6 +5,6 @@ public class PathFile {
 		
 	}
 	public String FilePath() {
-		return "D:/softwares/bin/activiti_data.json";
+		return "D:/softwares/bin/activiti_data.json"; //ALTERAR AQUI O PATH DO FICHEIRO JSON
 	}
 }

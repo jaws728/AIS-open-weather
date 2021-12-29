@@ -9,8 +9,10 @@ import ubidotsCode.Ubidots;
 public class ExportData implements JavaDelegate {
 	public void execute(DelegateExecution execution) 
 	{
+		// FICHEIRO NAO USADO
 		//Assumindo que os valores foram feitos guardados no ubidots
 		//Envia um sinal para exportar data
+		
 		
 		PathFile fp = new PathFile();
 		String file=fp.FilePath();
